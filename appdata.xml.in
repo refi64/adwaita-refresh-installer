@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="runtime">
+  <id>org.gtk.Gtk3theme.@NAME</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <name>@NAME Gtk theme</name>
+  <summary>@NAME Gtk theme</summary>
+</component>
