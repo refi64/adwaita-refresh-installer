@@ -47,6 +47,7 @@ build-native: _internal-repo
 
 build-flatpak: build-native
 	rm -rf _build/flatpak/repo
+	mkdir -p _build/flatpak
 	ostree init --mode=archive --repo=_build/flatpak/repo
 	ostree --repo=_build/flatpak/repo config set core.min-free-space-percent 0
 
