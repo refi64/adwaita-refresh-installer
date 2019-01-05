@@ -22,7 +22,19 @@ help:
 	# In addition, the install targets run the build targets automatically.
 	# The build targets also update the local GTK+ checkout in _build/gtk automatically.
 
-_internal-repo:
+_build/warning:
+	# **************************************** WARNING ****************************************
+	# This theme is installed under the name "AdwaitaRefresh", HOWEVER many apps change their
+	# behavior based on the name "Adwaita". Therefore, not everything will display 100%
+	# correctly. Examples include the pathbar and find floats.
+	# *******DO NOT, I repeat, DO NOT FILE BUGS WITH GTK+ BASED ON THE BEHAVIOR OF THIS.*******
+	# If something appears to be a bug, test it with the proper, *named* Adwaita first.
+	# **************************************** WARNING ****************************************
+	@echo -n '* Press Enter to confirm this warning (this will time out in 60 seconds)... '
+	@read -t 60
+	@touch $@
+
+_internal-repo: _build/warning
 	[ -d _build/gtk ] && (cd _build/gtk; git pull) || \
 		git clone --depth=1 -b wip/jimmac/adwaita-3-32 \
 			https://gitlab.gnome.org/GNOME/gtk.git _build/gtk
