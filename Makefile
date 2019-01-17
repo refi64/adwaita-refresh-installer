@@ -35,10 +35,12 @@ _build/warning:
 	@touch $@
 
 _internal-repo: _build/warning
-	[ -d _build/gtk ] && (cd _build/gtk; git pull) || \
+	[ -d _build/gtk ] && \
+		(cd _build/gtk; git fetch origin; git reset --hard origin/wip/jimmac/adwaita-3-32) || \
 		git clone --depth=1 -b wip/jimmac/adwaita-3-32 \
 			https://gitlab.gnome.org/GNOME/gtk.git _build/gtk
-	[ -d _build/adwaita-icon-theme ] && (cd _build/adwaita-icon-theme; git pull) || \
+	[ -d _build/adwaita-icon-theme ] && \
+		(cd _build/adwaita-icon-theme; git fetch origin; git reset --hard origin/master) || \
 		git clone --depth=1 https://gitlab.gnome.org/GNOME/adwaita-icon-theme.git \
 		_build/adwaita-icon-theme
 
