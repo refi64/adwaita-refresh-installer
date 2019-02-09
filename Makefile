@@ -25,8 +25,9 @@ help:
 _build/warning:
 	# **************************************** WARNING ****************************************
 	# This theme is installed under the name "AdwaitaRefresh", HOWEVER many apps change their
-	# behavior based on the name "Adwaita". Therefore, not everything will display 100%
-	# correctly. Examples include the pathbar and find floats.
+	# behavior based on the name "Adwaita". IN ADDITION, some parts of the new theme require
+	# corresponding GTK3 code changes. Therefore, not everything will display 100% correctly.
+	# Examples include switches, the pathbar and find floats.
 	# *******DO NOT, I repeat, DO NOT FILE BUGS WITH GTK+ BASED ON THE BEHAVIOR OF THIS.*******
 	# If something appears to be a bug, test it with the proper, *named* Adwaita first.
 	# **************************************** WARNING ****************************************
