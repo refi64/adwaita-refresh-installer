@@ -80,7 +80,7 @@ build-icons: _internal-repo
 	# XXX: Generate a basic Makefile without autotools.
 	echo 'SVGOUTDIR=Adwaita' > _build/adwaita-icon-theme/Makefile
 	echo -n 'THEME_DIRS=' >> _build/adwaita-icon-theme/Makefile
-	(cd _build/adwaita-icon-theme/Adwaita; echo !(cursors)/*) >> \
+	(cd _build/adwaita-icon-theme/Adwaita; echo !(cursors)/* | tr ' ' ',') >> \
 		_build/adwaita-icon-theme/Makefile
 	awk '/^THEME_DIRS=/{p=1;next;}; p; /done/{p=0;}' \
 		_build/adwaita-icon-theme/Makefile.am >> _build/adwaita-icon-theme/Makefile
