@@ -94,7 +94,7 @@ build-icons: _internal-repo
 _internal-build-flatpak:
 	rm -rf _build/flatpak/$(VARIANT)
 	flatpak build-init --type=extension _build/flatpak/$(VARIANT) org.gtk.Gtk3theme.$(VARIANT) \
-		org.freedesktop.Sdk org.freedesktop.Platform 18.08
+		org.freedesktop.Platform org.freedesktop.Platform 18.08
 
 	cp -r _build/native/$(VARIANT)/gtk-3.0/* _build/flatpak/$(VARIANT)/files
 	mkdir -p _build/flatpak/$(VARIANT)/files/share/appdata
